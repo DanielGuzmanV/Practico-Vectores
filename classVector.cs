@@ -22,7 +22,7 @@ namespace practicoVectores2
         {
             Random rand = new Random();
             this.cantidad = cant;
-            for(int ter = 1; ter <= this.cantidad; ter++)
+            for (int ter = 1; ter <= this.cantidad; ter++)
             {
                 vector[ter] = rand.Next(inicio, fin + 1);
             }
@@ -30,7 +30,7 @@ namespace practicoVectores2
         public string descargar()
         {
             string separador = "";
-            for(int ter = 1; ter <= this.cantidad; ter++)
+            for (int ter = 1; ter <= this.cantidad; ter++)
             {
                 separador = separador + vector[ter] + "|";
             }
@@ -63,9 +63,9 @@ namespace practicoVectores2
         {
             bool respuesta = false;
             int posi = 1;
-            while(posi <= this.cantidad && respuesta == false)
+            while (posi <= this.cantidad && respuesta == false)
             {
-                if(vector[posi] == dato)
+                if (vector[posi] == dato)
                 {
                     respuesta = true;
                 }
@@ -84,11 +84,11 @@ namespace practicoVectores2
         // Funciona auxiliar para ordenamiento
         public void ordenamientoBurbuja()
         {
-            for(int ter1 = this.cantidad; ter1 > 1; ter1--)
+            for (int ter1 = this.cantidad; ter1 > 1; ter1--)
             {
-                for(int ter2 = 1; ter2 < this.cantidad; ter2++)
+                for (int ter2 = 1; ter2 < this.cantidad; ter2++)
                 {
-                    if(vector[ter2] > vector[ter2 + 1])
+                    if (vector[ter2] > vector[ter2 + 1])
                     {
                         this.intercambio((ter2), (ter2 + 1));
                     }
@@ -98,11 +98,11 @@ namespace practicoVectores2
         // Funcion auxiliar para ordenamiento 2
         public void ordenIntercambio()
         {
-            for(int ter1 = 1; ter1 < this.cantidad; ter1++)
+            for (int ter1 = 1; ter1 < this.cantidad; ter1++)
             {
-                for(int ter2 = ter1 + 1; ter2 <= this.cantidad; ter2++)
+                for (int ter2 = ter1 + 1; ter2 <= this.cantidad; ter2++)
                 {
-                    if(vector[ter2] < vector[ter1])
+                    if (vector[ter2] < vector[ter1])
                     {
                         this.intercambio(ter2, ter1);
                     }
@@ -112,11 +112,11 @@ namespace practicoVectores2
         // Funcion auxiliar para ordenamiento por parametros
         public void ordenParmetros(int date1, int date2)
         {
-            for(int ter1 = date1; ter1 < date2; ter1++)
+            for (int ter1 = date1; ter1 < date2; ter1++)
             {
-                for(int ter2 = ter1 + 1; ter2 <= date2; ter2++)
+                for (int ter2 = ter1 + 1; ter2 <= date2; ter2++)
                 {
-                    if(vector[ter2] < vector[ter1])
+                    if (vector[ter2] < vector[ter1])
                     {
                         this.intercambio(ter2, ter1);
                     }
@@ -127,9 +127,9 @@ namespace practicoVectores2
         public int elemFrecuParam(int number, int inicio, int fin)
         {
             int conta = 0;
-            for(int ter = inicio; ter <= fin; ter++)
+            for (int ter = inicio; ter <= fin; ter++)
             {
-                if(vector[ter] == number)
+                if (vector[ter] == number)
                 {
                     conta++;
                 }
@@ -141,12 +141,13 @@ namespace practicoVectores2
         // ************************************************************
         // ----- Practico 1: primera parte -----
         // Pregunta 1 *******************************
+        // Cargar Elementos con la serie fibonacci de derecha a izquierda *****
         public void fibonaccInvertir(int number)
         {
             int varA, varB, varR;
             varA = -1; varB = 1;
             this.cantidad = number;
-            for(int ter = this.cantidad; ter > 0; ter--)
+            for (int ter = this.cantidad; ter > 0; ter--)
             {
                 varR = varA + varB;
                 vector[ter] = varR;
@@ -154,6 +155,7 @@ namespace practicoVectores2
             }
         }
         // Pregunta 2 *****************************
+        // Realiza una operacion de suma y resta de fracciones (revisar el practico 1)
         public double fraccionFibonacci(int number)
         {
             double sumadorS = 0;
@@ -161,12 +163,12 @@ namespace practicoVectores2
             bool bandera = true;
             double respuesta = 0;
 
-            for(int ter = 1; ter <= this.cantidad; ter++)
+            for (int ter = 1; ter <= this.cantidad; ter++)
             {
                 int numerador = vector[ter];
                 int denominador = number * ter;
 
-                if(bandera == true)
+                if (bandera == true)
                 {
                     sumadorS += ((double)numerador / (double)denominador);
                     bandera = false;
@@ -181,6 +183,7 @@ namespace practicoVectores2
             return respuesta;
         }
         // Pregunta 3 ***********************************
+        // Buscar elemento mayor de posiciones multiplos de number. Ejem 2,3,4,5,etc.
         public int elementoMayor(int number)
         {
             int posicion = 1;
@@ -188,9 +191,9 @@ namespace practicoVectores2
 
             int cant2 = this.cantidad / number;
 
-            for(posicion = 1; posicion <= cant2; posicion++)
+            for (posicion = 1; posicion <= cant2; posicion++)
             {
-                if(vector[posicion * number] > posMax)
+                if (vector[posicion * number] > posMax)
                 {
                     posMax = vector[posicion * number];
                 }
@@ -198,43 +201,47 @@ namespace practicoVectores2
             return posMax;
         }
         // Pregunta 4 *******************************
+        // Encontrar la media de posiciones multiplos de number *******
         public double multiplosPosicion(int number)
         {
             double suma = 0;
             double cant2 = this.cantidad / number;
 
-            for(int ter = 1; ter <= cant2; ter++)
+            for (int ter = 1; ter <= cant2; ter++)
             {
                 suma = suma + vector[ter * number];
             }
-            
+
             double resultado = suma / cant2;
             return resultado;
         }
         // Pregunta 5 ****************************
+        // Seleccionar elementos multiplos y no multiplos *******
         public void multiplsoNoMultiplos(int number, ref classVector vtr1, ref classVector vtr2)
         {
             vtr1.cantidad = 0;
             vtr2.cantidad = 0;
 
-            for(int ter = 1; ter <= this.cantidad; ter++)
+            for (int ter = 1; ter <= this.cantidad; ter++)
             {
                 int verdad = vector[ter] % number;
                 if (verdad == 0)
                 {
                     vtr1.cargarElexEle(vector[ter]);
-                }else
+                }
+                else
                 {
                     vtr2.cargarElexEle(vector[ter]);
                 }
             }
         }
         // Pregunta 6 ************************
+        // Invertir los elementos del vector (sin usar objeto vector auxiliar)
         public void invertirVector()
         {
             int number1;
             int cant = this.cantidad;
-            for(int ter = 1; ter <= this.cantidad / 2; ter++)
+            for (int ter = 1; ter <= this.cantidad / 2; ter++)
             {
                 number1 = vector[ter];
                 vector[ter] = vector[cant];
@@ -245,13 +252,14 @@ namespace practicoVectores2
             }
         }
         // Pregunta 7 ************************
+        // Verificar si todos los elementos son iguales ********
         public bool elementosIguales()
         {
             bool bandera = true;
             int ter = 1;
-            while(ter < this.cantidad && bandera == true)
+            while (ter < this.cantidad && bandera == true)
             {
-                if(!(vector[ter] <= vector[ter + 1]))
+                if (!(vector[ter] <= vector[ter + 1]))
                 {
                     bandera = false;
                 }
@@ -259,7 +267,9 @@ namespace practicoVectores2
             }
             return bandera;
         }
-        // Pregunta 8 *********************
+        // Pregunta 8 ************************
+        // Encontra la union de elementos de dos vectores en un tercer vector
+        // (El resultado no puede tener elementos repetidos)
         public void unioElementos(classVector vect2, ref classVector vectResultado)
         {
             vectResultado.cantidad = 0;
@@ -269,19 +279,21 @@ namespace practicoVectores2
             }
             for (int ter2 = 1; ter2 <= vect2.cantidad; ter2++)
             {
-                if ( this.busqueSecuencial(vect2.vector[ter2]) == false)
+                if (this.busqueSecuencial(vect2.vector[ter2]) == false)
                 {
                     vectResultado.cargarElexEle(vect2.vector[ter2]);
                 }
             }
         }
         // Pregunta 9 ************************
+        // Encontrar la diferencia de elementos 
+        //(Elementos del vector 1 que no estan en el vector 2)
         public void diferenciaElementos(classVector vect2, ref classVector vectR)
         {
             vectR.cantidad = 0;
-            for(int ter = 1; ter <= this.cantidad; ter++)
+            for (int ter = 1; ter <= this.cantidad; ter++)
             {
-                if(vect2.busqueSecuencial(vector[ter]) == false)
+                if (vect2.busqueSecuencial(vector[ter]) == false)
                 {
                     vectR.cargarElexEle(vector[ter]);
                 }
@@ -289,13 +301,14 @@ namespace practicoVectores2
         }
 
         // Pregunta 10 ***********************
+        // verificar si el segmento A y B estan ordenados
         public bool segmentoOrdenado(int inicio, int fin)
         {
             bool respuesta = true;
             int ter = inicio;
-            while(ter < fin && respuesta == true)
+            while (ter < fin && respuesta == true)
             {
-                if(!(vector[ter] <= vector[ter + 1]))
+                if (!(vector[ter] <= vector[ter + 1]))
                 {
                     respuesta = false;
                 }
@@ -329,11 +342,11 @@ namespace practicoVectores2
         public void ordenElemPos(int number)
         {
             int media = this.cantidad / number;
-            for(int ter = 1; ter < media; ter++)
+            for (int ter = 1; ter < media; ter++)
             {
-                for(int ter2 = ter + 1; ter2 <= media; ter2++)
+                for (int ter2 = ter + 1; ter2 <= media; ter2++)
                 {
-                    if(vector[ter * number] > vector[ter2 * number])
+                    if (vector[ter * number] > vector[ter2 * number])
                     {
                         this.intercambio((ter2 * number), (ter * number));
                     }
@@ -351,10 +364,10 @@ namespace practicoVectores2
             int ter1 = 1;
             int auxi;
 
-            while(ter1 <= media)
+            while (ter1 <= media)
             {
                 auxi = vector[ter1 + 1];
-                for(int ter2 = ter1; ter2 < cant - 2; ter2++)
+                for (int ter2 = ter1; ter2 < cant - 2; ter2++)
                 {
                     vector[ter2 + 1] = vector[ter2 + 2];
                 }
@@ -391,15 +404,15 @@ namespace practicoVectores2
             conta = 0; max = 0; ter = number1;
 
             this.ordenParmetros(ter, number2);
-            while(ter <= number2)
+            while (ter <= number2)
             {
                 frecu = 0;
                 ele = vector[ter];
-                while((ter <= number2) && (vector[ter] == ele))
+                while ((ter <= number2) && (vector[ter] == ele))
                 {
                     ter++; frecu++;
                 }
-                if((frecu > max) && (frecu != 1))
+                if ((frecu > max) && (frecu != 1))
                 {
                     max = frecu;
                     conta = 0;
@@ -408,7 +421,7 @@ namespace practicoVectores2
                     vectEle.vector[conta] = ele;
                     vectFrecu.vector[conta] = max;
                 }
-                else if((frecu >= max) && (frecu != 1))
+                else if ((frecu >= max) && (frecu != 1))
                 {
                     conta++;
                     vectEle.vector[conta] = ele;
@@ -424,15 +437,15 @@ namespace practicoVectores2
         {
             vectEle.cantidad = 0;
             vectFrecu.cantidad = 0;
-            
+
             int ter1, ele, frecu;
             ter1 = number1;
             this.ordenParmetros(ter1, number2);
-            while(ter1 <= number2)
+            while (ter1 <= number2)
             {
                 frecu = 0;
                 ele = vector[ter1];
-                while((ter1 <= number2) && (vector[ter1] == ele))
+                while ((ter1 <= number2) && (vector[ter1] == ele))
                 {
                     ter1++; frecu++;
                 }
@@ -449,14 +462,14 @@ namespace practicoVectores2
             int ter1, ele, frecu, varfibo, varA, varB;
             ter1 = 1; varA = 0; varB = 1; varfibo = 0;
             this.ordenamientoBurbuja();
-            while(ter1 <= this.cantidad)
+            while (ter1 <= this.cantidad)
             {
                 varfibo = varA + varB;
                 frecu = 0;
                 ele = vector[ter1];
-                if(ele == varfibo)
+                if (ele == varfibo)
                 {
-                    while((ter1 <= this.cantidad) && (vector[ter1] == ele))
+                    while ((ter1 <= this.cantidad) && (vector[ter1] == ele))
                     {
                         ter1++; frecu++;
                     }
@@ -464,11 +477,11 @@ namespace practicoVectores2
                     frecufibo.cargarElexEle(frecu);
                     varA = varB; varB = varfibo;
                 }
-                else if(ele < varfibo)
+                else if (ele < varfibo)
                 {
                     ter1++;
                 }
-                else if(ele > varfibo)
+                else if (ele > varfibo)
                 {
                     varA = varB; varB = varfibo;
                 }
@@ -477,13 +490,13 @@ namespace practicoVectores2
         // Pregunta 8 ********************************************
         // Segmentar el vector en repetidos y no repetidos(repetidos a la izquierda y no repetidos a la derecha)
         // Ordenados descendentemente
-       public void segmentarElemRepYNoRep(int ini, int fin)
+        public void segmentarElemRepYNoRep(int ini, int fin)
         {
-            for(int ter1 = ini; ter1 < fin; ter1++)
+            for (int ter1 = ini; ter1 < fin; ter1++)
             {
-                for(int ter2 = ter1 + 1; ter2 <= fin; ter2++)
+                for (int ter2 = ter1 + 1; ter2 <= fin; ter2++)
                 {
-                    if((elemFrecuParam(vector[ter2], ini, fin) != 1) && (!(elemFrecuParam(vector[ter1], ini, fin) != 1)) ||
+                    if ((elemFrecuParam(vector[ter2], ini, fin) != 1) && (!(elemFrecuParam(vector[ter1], ini, fin) != 1)) ||
                         (elemFrecuParam(vector[ter2], ini, fin) != 1) && (elemFrecuParam(vector[ter1], ini, fin) != 1) && (vector[ter2] > vector[ter1]) ||
                         (!(elemFrecuParam(vector[ter2], ini, fin) != 1)) && (!(elemFrecuParam(vector[ter1], ini, fin) != 1)) && (vector[ter2] > vector[ter1]))
                     {
@@ -500,14 +513,14 @@ namespace practicoVectores2
             numerosEnteros number1 = new numerosEnteros();
             numerosEnteros number2 = new numerosEnteros();
 
-            for(int ter1 = 1; ter1 < this.cantidad; ter1++)
+            for (int ter1 = 1; ter1 < this.cantidad; ter1++)
             {
-                for(int ter2 = ter1 + 1; ter2 <= this.cantidad; ter2++)
+                for (int ter2 = ter1 + 1; ter2 <= this.cantidad; ter2++)
                 {
                     number1.cargarDatos(vector[ter1]);
                     number2.cargarDatos(vector[ter2]);
-                    
-                    if((number2.verifCapicua()) && (!number1.verifCapicua()) || 
+
+                    if ((number2.verifCapicua()) && (!number1.verifCapicua()) ||
                         (number2.verifCapicua()) && (number1.verifCapicua()) && (vector[ter2] < vector[ter1]) ||
                         (!number2.verifCapicua()) && (!number1.verifCapicua()) && (vector[ter2] > vector[ter1]))
                     {
@@ -524,16 +537,16 @@ namespace practicoVectores2
             numerosEnteros number2 = new numerosEnteros();
             bool cambio = true;
 
-            for(int ter1 = ini; ter1 < fin; ter1++)
+            for (int ter1 = ini; ter1 < fin; ter1++)
             {
-                if(cambio == true)
+                if (cambio == true)
                 {
-                    for(int ter2 = ter1 + 1; ter2 <= fin; ter2++)
+                    for (int ter2 = ter1 + 1; ter2 <= fin; ter2++)
                     {
                         number1.cargarDatos(vector[ter1]);
                         number2.cargarDatos(vector[ter2]);
 
-                        if((number2.verifPrimo()) && (!number1.verifPrimo()) ||
+                        if ((number2.verifPrimo()) && (!number1.verifPrimo()) ||
                         (number2.verifPrimo()) && (number1.verifPrimo()) && (vector[ter2] < vector[ter1]) ||
                         (!number2.verifPrimo()) && (!number1.verifPrimo()) && (vector[ter2] > vector[ter1]))
                         {
@@ -543,7 +556,7 @@ namespace practicoVectores2
                 }
                 else
                 {
-                    for(int ter2 = ter1 + 1; ter2 <= fin; ter2++)
+                    for (int ter2 = ter1 + 1; ter2 <= fin; ter2++)
                     {
                         number1.cargarDatos(vector[ter1]);
                         number2.cargarDatos(vector[ter2]);
