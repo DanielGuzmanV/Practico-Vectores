@@ -459,6 +459,7 @@ namespace practicoVectores2
         {
             elefibo.cantidad = 0;
             frecufibo.cantidad = 0;
+
             int ter1, ele, frecu, varfibo, varA, varB;
             ter1 = 1; varA = 0; varB = 1; varfibo = 0;
             this.ordenamientoBurbuja();

@@ -54,13 +54,6 @@
             this.pregunta10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practico2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregunta1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.pregunta2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pregunta2ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pregunta4ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,6 +63,13 @@
             this.pregunta8ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregunta9ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pregunta10ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,21 +101,21 @@
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(262, 32);
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(204, 32);
             this.cargarToolStripMenuItem.Text = "cargar";
             this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
             // 
             // descargarToolStripMenuItem
             // 
             this.descargarToolStripMenuItem.Name = "descargarToolStripMenuItem";
-            this.descargarToolStripMenuItem.Size = new System.Drawing.Size(262, 32);
+            this.descargarToolStripMenuItem.Size = new System.Drawing.Size(204, 32);
             this.descargarToolStripMenuItem.Text = "descargar";
             this.descargarToolStripMenuItem.Click += new System.EventHandler(this.descargarToolStripMenuItem_Click);
             // 
             // cargarElexEleToolStripMenuItem
             // 
             this.cargarElexEleToolStripMenuItem.Name = "cargarElexEleToolStripMenuItem";
-            this.cargarElexEleToolStripMenuItem.Size = new System.Drawing.Size(262, 32);
+            this.cargarElexEleToolStripMenuItem.Size = new System.Drawing.Size(204, 32);
             this.cargarElexEleToolStripMenuItem.Text = "cargarElexEle";
             this.cargarElexEleToolStripMenuItem.Click += new System.EventHandler(this.cargarElexEleToolStripMenuItem_Click);
             // 
@@ -288,119 +288,63 @@
             // pregunta1ToolStripMenuItem1
             // 
             this.pregunta1ToolStripMenuItem1.Name = "pregunta1ToolStripMenuItem1";
-            this.pregunta1ToolStripMenuItem1.Size = new System.Drawing.Size(185, 32);
+            this.pregunta1ToolStripMenuItem1.Size = new System.Drawing.Size(196, 32);
             this.pregunta1ToolStripMenuItem1.Text = "Pregunta 1";
             this.pregunta1ToolStripMenuItem1.Click += new System.EventHandler(this.pregunta1ToolStripMenuItem1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(119, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 34);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(317, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 34);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(509, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 34);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(119, 121);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(699, 34);
-            this.textBox4.TabIndex = 4;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(119, 181);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(699, 34);
-            this.textBox5.TabIndex = 5;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(119, 238);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(699, 34);
-            this.textBox6.TabIndex = 6;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(119, 288);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(699, 34);
-            this.textBox7.TabIndex = 7;
             // 
             // pregunta2ToolStripMenuItem1
             // 
             this.pregunta2ToolStripMenuItem1.Name = "pregunta2ToolStripMenuItem1";
-            this.pregunta2ToolStripMenuItem1.Size = new System.Drawing.Size(185, 32);
+            this.pregunta2ToolStripMenuItem1.Size = new System.Drawing.Size(196, 32);
             this.pregunta2ToolStripMenuItem1.Text = "Pregunta 2";
             this.pregunta2ToolStripMenuItem1.Click += new System.EventHandler(this.pregunta2ToolStripMenuItem1_Click);
             // 
             // pregunta2ToolStripMenuItem2
             // 
             this.pregunta2ToolStripMenuItem2.Name = "pregunta2ToolStripMenuItem2";
-            this.pregunta2ToolStripMenuItem2.Size = new System.Drawing.Size(185, 32);
+            this.pregunta2ToolStripMenuItem2.Size = new System.Drawing.Size(196, 32);
             this.pregunta2ToolStripMenuItem2.Text = "Pregunta 3";
             this.pregunta2ToolStripMenuItem2.Click += new System.EventHandler(this.pregunta2ToolStripMenuItem2_Click);
             // 
             // pregunta4ToolStripMenuItem1
             // 
             this.pregunta4ToolStripMenuItem1.Name = "pregunta4ToolStripMenuItem1";
-            this.pregunta4ToolStripMenuItem1.Size = new System.Drawing.Size(185, 32);
+            this.pregunta4ToolStripMenuItem1.Size = new System.Drawing.Size(196, 32);
             this.pregunta4ToolStripMenuItem1.Text = "Pregunta 4";
             this.pregunta4ToolStripMenuItem1.Click += new System.EventHandler(this.pregunta4ToolStripMenuItem1_Click);
             // 
             // pregunta5ToolStripMenuItem1
             // 
             this.pregunta5ToolStripMenuItem1.Name = "pregunta5ToolStripMenuItem1";
-            this.pregunta5ToolStripMenuItem1.Size = new System.Drawing.Size(185, 32);
+            this.pregunta5ToolStripMenuItem1.Size = new System.Drawing.Size(196, 32);
             this.pregunta5ToolStripMenuItem1.Text = "Pregunta 5";
             this.pregunta5ToolStripMenuItem1.Click += new System.EventHandler(this.pregunta5ToolStripMenuItem1_Click);
             // 
             // pregunta6ToolStripMenuItem1
             // 
             this.pregunta6ToolStripMenuItem1.Name = "pregunta6ToolStripMenuItem1";
-            this.pregunta6ToolStripMenuItem1.Size = new System.Drawing.Size(185, 32);
+            this.pregunta6ToolStripMenuItem1.Size = new System.Drawing.Size(196, 32);
             this.pregunta6ToolStripMenuItem1.Text = "Pregunta 6";
             this.pregunta6ToolStripMenuItem1.Click += new System.EventHandler(this.pregunta6ToolStripMenuItem1_Click);
             // 
             // pregunta7ToolStripMenuItem1
             // 
             this.pregunta7ToolStripMenuItem1.Name = "pregunta7ToolStripMenuItem1";
-            this.pregunta7ToolStripMenuItem1.Size = new System.Drawing.Size(185, 32);
+            this.pregunta7ToolStripMenuItem1.Size = new System.Drawing.Size(196, 32);
             this.pregunta7ToolStripMenuItem1.Text = "Pregunta 7";
             this.pregunta7ToolStripMenuItem1.Click += new System.EventHandler(this.pregunta7ToolStripMenuItem1_Click);
             // 
             // pregunta8ToolStripMenuItem
             // 
             this.pregunta8ToolStripMenuItem.Name = "pregunta8ToolStripMenuItem";
-            this.pregunta8ToolStripMenuItem.Size = new System.Drawing.Size(185, 32);
+            this.pregunta8ToolStripMenuItem.Size = new System.Drawing.Size(196, 32);
             this.pregunta8ToolStripMenuItem.Text = "Pregunta 8";
             this.pregunta8ToolStripMenuItem.Click += new System.EventHandler(this.pregunta8ToolStripMenuItem_Click);
             // 
             // pregunta9ToolStripMenuItem2
             // 
             this.pregunta9ToolStripMenuItem2.Name = "pregunta9ToolStripMenuItem2";
-            this.pregunta9ToolStripMenuItem2.Size = new System.Drawing.Size(185, 32);
+            this.pregunta9ToolStripMenuItem2.Size = new System.Drawing.Size(196, 32);
             this.pregunta9ToolStripMenuItem2.Text = "Pregunta 9";
             this.pregunta9ToolStripMenuItem2.Click += new System.EventHandler(this.pregunta9ToolStripMenuItem2_Click);
             // 
@@ -410,6 +354,62 @@
             this.pregunta10ToolStripMenuItem1.Size = new System.Drawing.Size(196, 32);
             this.pregunta10ToolStripMenuItem1.Text = "Pregunta 10";
             this.pregunta10ToolStripMenuItem1.Click += new System.EventHandler(this.pregunta10ToolStripMenuItem1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(107, 83);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 34);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(315, 83);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 34);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(510, 83);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 34);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(107, 141);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(699, 34);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(107, 199);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(699, 34);
+            this.textBox5.TabIndex = 5;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(107, 260);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(699, 34);
+            this.textBox6.TabIndex = 6;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(107, 315);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(699, 34);
+            this.textBox7.TabIndex = 7;
             // 
             // Form1
             // 
@@ -427,7 +427,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "yyyyygfvy";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
