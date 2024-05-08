@@ -102,7 +102,7 @@ namespace practicoVectores2
             {
                 for (int ter2 = ter1 + 1; ter2 <= this.cantidad; ter2++)
                 {
-                    if (vector[ter2] < vector[ter1])
+                    if (vector[ter2] > vector[ter1])
                     {
                         this.intercambio(ter2, ter1);
                     }
