@@ -8,3 +8,5 @@ practicoVectores2.csproj
 practicoVectores2.sln
 .vs
 Form1.cs
+Form1.Designer.cs
+Program.cs
