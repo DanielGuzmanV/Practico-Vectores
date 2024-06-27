@@ -102,7 +102,7 @@ namespace practicoVectores2
             {
                 for (int ter2 = ter1 + 1; ter2 <= this.cantidad; ter2++)
                 {
-                    if (vector[ter2] > vector[ter1])
+                    if (vector[ter2] < vector[ter1])
                     {
                         this.intercambio(ter2, ter1);
                     }
@@ -116,7 +116,7 @@ namespace practicoVectores2
             {
                 for (int ter2 = ter1 + 1; ter2 <= date2; ter2++)
                 {
-                    if (vector[ter2] < vector[ter1])
+                    if (vector[ter2] > vector[ter1])
                     {
                         this.intercambio(ter2, ter1);
                     }
@@ -158,8 +158,8 @@ namespace practicoVectores2
         // Realiza una operacion de suma y resta de fracciones (revisar el practico 1)
         public double fraccionFibonacci(int number)
         {
-            double sumadorS = 0;
-            double sumadorR = 0;
+            double sumadorSum = 0;
+            double sumadorRes = 0;
             bool bandera = true;
             double respuesta = 0;
 
@@ -170,19 +170,19 @@ namespace practicoVectores2
 
                 if (bandera == true)
                 {
-                    sumadorS += ((double)numerador / (double)denominador);
+                    sumadorSum += ((double)numerador / (double)denominador);
                     bandera = false;
                 }
                 else
                 {
-                    sumadorR -= ((double)numerador / (double)denominador);
+                    sumadorRes -= ((double)numerador / (double)denominador);
                     bandera = true;
                 }
-                respuesta = sumadorS + sumadorR;
+                respuesta = sumadorSum + sumadorRes;
             }
             return respuesta;
         }
-        // Pregunta 3 ***********************************
+        // Pregunta 3 ***b ********************************
         // Buscar elemento mayor de posiciones multiplos de number. Ejem 2,3,4,5,etc.
         public int elementoMayor(int number)
         {
@@ -279,7 +279,7 @@ namespace practicoVectores2
             }
             for (int ter2 = 1; ter2 <= vect2.cantidad; ter2++)
             {
-                if (this.busqueSecuencial(vect2.vector[ter2]) == false)
+                if (this.busqueSecuencial(vect2.vector[ter2]) == true)
                 {
                     vectResultado.cargarElexEle(vect2.vector[ter2]);
                 }
@@ -548,13 +548,15 @@ namespace practicoVectores2
                         number2.cargarDatos(vector[ter2]);
 
                         if ((number2.verifPrimo()) && (!number1.verifPrimo()) ||
-                        (number2.verifPrimo()) && (number1.verifPrimo()) && (vector[ter2] < vector[ter1]) ||
-                        (!number2.verifPrimo()) && (!number1.verifPrimo()) && (vector[ter2] > vector[ter1]))
+                        (number2.verifPrimo()) && (number1.verifPrimo()) && (vector[ter2] > vector[ter1]) ||
+                        (!number2.verifPrimo()) && (!number1.verifPrimo()) && (vector[ter2] < vector[ter1]))
                         {
                             this.intercambio(ter2, ter1);
                         }
                     }
                 }
+                //10|14|2|5|11|11|15|2|13|8|15|
+                //10|13|14|11|15|11|5|2|2|8|15|
                 else
                 {
                     for (int ter2 = ter1 + 1; ter2 <= fin; ter2++)
@@ -563,8 +565,8 @@ namespace practicoVectores2
                         number2.cargarDatos(vector[ter2]);
 
                         if ((!number2.verifPrimo()) && (number1.verifPrimo()) ||
-                        (!number2.verifPrimo()) && (!number1.verifPrimo()) && (vector[ter2] < vector[ter1]) ||
-                        (number2.verifPrimo()) && (number1.verifPrimo()) && (vector[ter2] > vector[ter1]))
+                        (!number2.verifPrimo()) && (!number1.verifPrimo()) && (vector[ter2] > vector[ter1]) ||
+                        (number2.verifPrimo()) && (number1.verifPrimo()) && (vector[ter2] < vector[ter1]))
                         {
                             this.intercambio(ter2, ter1);
                         }
